@@ -22,10 +22,11 @@
     -->
     <title>Breaking Bonds</title>
     <style>
-      nav {
+      .navbar {
         margin: 0 auto;
+        display: inline-block;
       }
-      clock {
+      #clock {
         text-align: center;
         margin: 0 auto;
       }
@@ -39,10 +40,6 @@
     </noscript>
 
     <script>
-        // var refreshId = setInterval(function()
-        // {
-        //     $("#board").load(document.URL + ' #board');
-        // }, 15000);
         $(document).ready(function() {
             $("#Grading").click(function() {
                 document.getElementById("board").style.display = 'none';
@@ -62,6 +59,7 @@
         </a>
       </form>
     </nav>
+    <div id="clock"></div>
     <div id="root"></div>
     <!--
       This HTML file is a template.
