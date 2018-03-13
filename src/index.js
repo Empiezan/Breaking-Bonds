@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-// import GraderContainer from './containers/GraderContainer'
+// import App from './App';
+import GraderContainer from './containers/GraderContainer'
 import registerServiceWorker from './registerServiceWorker';
 
 ReactDOM.render(
-  <App />,
+  <GraderContainer />,
   document.getElementById('root')
 );
 registerServiceWorker();

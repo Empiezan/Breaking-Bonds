@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TeamIDSelect from '../components/TeamIDSelect';
-// import client from '../client';
+const { authorize } = require('../client');
 
 class GraderContainer extends Component {
   componentDidMount() {
@@ -37,7 +37,7 @@ class GraderContainer extends Component {
             </label>
           </div>
 
-          <button>Submit Grades</button>
+          <button onClick={ authorize }>Submit Grades</button>
 
         </form>
 
