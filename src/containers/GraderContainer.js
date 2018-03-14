@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import TeamIDSelect from '../components/TeamIDSelect';
-const { authorize } = require('../client');
+const {google} = require('googleapis');
+const { initClient, readValue } = require('../client');
 
 class GraderContainer extends Component {
-  componentDidMount() {
 
+  eventHandler(event) {
+    google.load('client', initClient);
+    debugger;
+    readValue();
   }
 
   render() {
@@ -15,7 +19,7 @@ class GraderContainer extends Component {
           <div>
             <label>
               Team ID:
-              <TeamIDSelect/>
+              <TeamIDSelect />
             </label>
           </div>
 
@@ -37,7 +41,7 @@ class GraderContainer extends Component {
             </label>
           </div>
 
-          <button onClick={ authorize }>Submit Grades</button>
+          <button onClick={this.eventHandler}>Submit Grades</button>
 
         </form>
 
